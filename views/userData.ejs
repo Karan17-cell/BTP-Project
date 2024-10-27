@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data</title>
+    <style>
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        
+        .form-box {
+            background-color: rgba(19, 20, 19, 0.85);
+            color: rgb(252, 254, 254);
+            padding: 20px;
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            text-align: left;
+        }
+
+        .form-box h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .form-box label {
+            margin-top: 10px;
+            display: block;
+        }
+
+        .form-box select,
+        .form-box input[type="number"],
+        .form-box input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #706b6b;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Calorie tracker button */
+        .calorie-tracker {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .calorie-tracker button {
+            padding: 10px 20px;
+            background-color: #50c65f;
+            border: none;
+            color: rgb(8, 8, 8);
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .calorie-tracker button:hover {
+            background-color: #5d8b65c7;
+        }
+
+        
+        .workout-plan {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .workout-plan button {
+            padding: 10px 20px;
+            background-color: #3769b3;
+            border: none;
+            color: rgb(244, 244, 244);
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .workout-plan button:hover {
+            background-color: #3775b8;
+        }
+
+        
+        .calorie-tracker {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        
+        <div class="form-box">
+            <h2>User Information</h2>
+            <form action="/submitUserData" method="POST">
+                <label for="gender">Gender:</label>
+                <select name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+
+                <label for="goal">Goal:</label>
+                <select name="goal" required>
+                    <option value="muscle_gain">Muscle Gain</option>
+                    <option value="weight_loss">Weight Loss</option>
+                </select>
+
+                <label for="age">Age:</label>
+                <input type="number" name="age" placeholder="Age" required>
+
+                <label for="height">Height (cm):</label>
+                <input type="number" name="height" placeholder="Height" required>
+
+                <label for="currentWeight">Current Weight (kg):</label>
+                <input type="number" name="currentWeight" placeholder="Current Weight" required>
+
+                <label for="targetWeight">Target Weight (kg):</label>
+                <input type="number" name="targetWeight" placeholder="Target Weight" required>
+            </form>
+        </div>
+
+        
+        <div class="form-box">
+            <h2>Workout Preferences</h2>
+            <form action="/submitUserData" method="POST">
+                <label for="workoutPreference">Workout Preference:</label>
+                <select name="workoutPreference" required>
+                    <option value="gym">Gym</option>
+                    <option value="at_home">At Home</option>
+                </select>
+
+                <label for="medicalCondition">Any Medical Condition:</label>
+                <select name="medicalCondition" required>
+                    <option value="none">None</option>
+                    <option value="diabetes">Diabetes</option>
+                    <option value="high_blood_pressure">High Blood Pressure</option>
+                    <option value="breathing_problem">Breathing Problem</option>
+                    <option value="past_surgery">Past Surgery</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <div class="workout-plan">
+                    <button type="button" onclick="window.location.href='/createWorkoutPlan'">Create Workout Plan</button>
+                </div>
+
+                <div class="calorie-tracker">
+                    <button type="button" onclick="window.location.href='/calorieTracker'">Calorie Tracker</button>
+                    <p>Total Calories Today: 0 cal</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

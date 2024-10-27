@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BodyMend - Login</title>
+    <style>
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('https://img.freepik.com/premium-photo/modern-gym-training-room_752325-34182.jpg?w=1060') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+
+        
+        header {
+            text-align: center;
+            color: #c9ced5;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        
+        .login-box {
+            background-color: rgba(93, 100, 107, 0.85);
+            padding: 40px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .login-box h2 {
+            margin: 0 0 20px;
+            color: #fcf9f9;
+        }
+
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #7c9c48;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-box button:hover {
+            background-color: #639a68;
+        }
+
+        
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #ffffff;
+            font-size: 1em;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        footer p {
+            margin: 5px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>BodyMend</h1>
+        <p>Your Path to Health and Wellness</p>
+    </header>
+
+    
+    <div class="login-box">
+        <h2>Login</h2>
+        <form action="/userData" method="GET">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    
+    <footer>
+        <p>"Unlock your potential with BodyMend – your journey to wellness starts here.."</p>
+    </footer>
+</body>
+</html>

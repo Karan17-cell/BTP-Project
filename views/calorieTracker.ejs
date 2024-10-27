@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Intake</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding-top: 50px; 
+            background: url('https://img.freepik.com/free-photo/high-angle-indian-food-assortment_23-2148747704.jpg?ga=GA1.1.167476339.1720677155&semt=ais_hybrid') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column; 
+            width: 90%;
+            max-width: 800px; 
+            background-color: rgba(24, 30, 35, 0.9); 
+            border-radius: 15px; 
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 20px; 
+        }
+
+        h2 {
+            color: #f1ee24;
+            margin-bottom: 20px;
+            text-align: center; 
+            font-size: 28px;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0; 
+        }
+
+        label {
+            flex-basis: 45%; 
+            color: #fffdfd;
+            font-weight: bold;
+            align-self: center; 
+        }
+
+        input[type="number"] {
+            flex-basis: 50%; 
+            padding: 10px;
+            margin-left: 10px; 
+            border: 2px solid #9e9da6; 
+            border-radius: 8px; 
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        input[type="number"]:focus {
+            border-color: #45a049; 
+            outline: none; 
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #27bdc0;
+            border: none;
+            color: white;
+            border-radius: 55px;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 20px auto; 
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049; 
+        }
+
+        @media (max-width: 600px) {
+            .form-container {
+                width: 100%; 
+            }
+
+            .form-row {
+                flex-direction: column; 
+                align-items: flex-start; 
+            }
+
+            label {
+                margin-bottom: 5px; 
+            }
+
+            input[type="number"] {
+                margin-left: 0; 
+                width: 100%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Calorie Intake for Today</h2>
+        <form action="/submitCalorieIntake" method="POST">
+            <div class="form-row">
+                <label for="milk">Milk (per glass in ml):</label>
+                <input type="number" name="milk" placeholder="e.g. 200">
+            </div>
+            <div class="form-row">
+                <label for="roti">Roti (per piece):</label>
+                <input type="number" name="roti" placeholder="e.g. 1">
+            </div>
+            <div class="form-row">
+                <label for="rice">Rice (in grams):</label>
+                <input type="number" name="rice" placeholder="e.g. 150">
+            </div>
+            <div class="form-row">
+                <label for="poha">Poha (in grams):</label>
+                <input type="number" name="poha" placeholder="e.g. 100">
+            </div>
+            <div class="form-row">
+                <label for="dal">Dal (in grams):</label>
+                <input type="number" name="dal" placeholder="e.g. 100">
+            </div>
+            <div class="form-row">
+                <label for="chicken">Chicken (in grams):</label>
+                <input type="number" name="chicken" placeholder="e.g. 200">
+            </div>
+            <div class="form-row">
+                <label for="egg">Eggs (number of eggs):</label>
+                <input type="number" name="egg" placeholder="e.g. 2">
+            </div>
+            <div class="form-row">
+                <label for="curd">Curd (in ml):</label>
+                <input type="number" name="curd" placeholder="e.g. 100">
+            </div>
+            <div class="form-row">
+                <label for="fruits">Fruits (in grams):</label>
+                <input type="number" name="fruits" placeholder="e.g. 150">
+            </div>
+            <div class="form-row">
+                <label for="vegetables">Vegetables (in grams):</label>
+                <input type="number" name="vegetables" placeholder="e.g. 200">
+            </div>
+            <div class="form-row">
+                <label for="snacks">Snacks (in grams):</label>
+                <input type="number" name="snacks" placeholder="e.g. 50">
+            </div>
+            <button type="submit">Submit Calorie Intake</button>
+        </form>
+    </div>
+</body>
+</html>
